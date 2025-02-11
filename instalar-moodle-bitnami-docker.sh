@@ -10,6 +10,7 @@ docker volume create --name mariadb_data
 
 # PASO 4: Ejecutar contenedor para BBDD MariaDB
 docker run -d --name mariadb \
+  -p 3306:3306 \
   --env ALLOW_EMPTY_PASSWORD=yes \
   --env MARIADB_USER=bn_moodle \
   --env MARIADB_PASSWORD=bitnami \
